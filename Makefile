@@ -10,13 +10,13 @@ table1.rds: code/02_make_table.R covid_data_cleaned.rds
 	Rscript code/02_make_table.R
 
 # creates figures
-.png: code/02_make_heatmap.R code/03_make_figures.R covid_data_cleaned.rds
-	Rscript code/02_make_heatmap.R code/03_make_figures.R
+.png: code/03_make_heatmap.R
+	Rscript code/03_make_heatmap.R
 	
 # creates survival analysis results
 ##### Lead TO DO
 
 .PHONY: clean
 clean:
-	rm -f output/ && rm -f report_group7.html && rm -f table/ && rm -f data/data_cleaned.rds && rm -f figure/
+	rm -f figure/*.rds
 	
