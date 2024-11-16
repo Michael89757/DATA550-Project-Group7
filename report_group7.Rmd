@@ -34,6 +34,7 @@ here::i_am(
 data <- readRDS(
   file = here::here("data/covid_data_cleaned.rds")
 )
+
 ```
 
 # Descriptive Analysis
@@ -61,8 +62,9 @@ description
 #| fig.align = "center",
 #| out.width = "600px"
 knitr::include_graphics(
-  here::here("figure/name.png")
+  here::here("figure", "Overall Comorbidities & Death.rds") #! TO DO: add appropriate file path to read scatter plot
 )
+
 ```
 
 ##### Plots
