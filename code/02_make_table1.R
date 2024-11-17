@@ -9,7 +9,7 @@ df <- readRDS(
 # Coder 1 TO DO Here
 library(gtsummary)
 
-table_one <- data |>
+table_one <- df |>
   select("SEX", "AGE", "COVID19_CARRIER_STATUS", "PATIENT_TYPE", "PNEUMONIA", "PREGNANT", "DIABETES", 
          "COPD", "ASTHMA", "INMSUPR", "HIPERTENSION", "CARDIOVASCULAR", "RENAL_CHRONIC", "OTHER_DISEASE",
          "OBESITY", "TOBACCO", "USMER", "MEDICAL_UNIT", "INTUBED", "ICU", "DEATH") |>

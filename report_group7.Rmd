@@ -43,7 +43,7 @@ data <- readRDS(
 
 ##### Table 1: Descriptive summary table
 
-description
+Table 1 provides a detailed comparison of patient characteristics and clinical factors associated with death among COVID-19 patients in the analyzed subset of the Mexican COVID-19 dataset. The dataset includes 209,715 patients, of which 194,444 (93%) survived, and 15,271 (7%) died. Significant differences were observed across all variables between the two groups, as indicated by p-values < 0.001 for most comparisons. These findings underscore the importance of early identification of high-risk groups to optimize care and resource allocation during the pandemic.
 
 ```{r, table1}
 table1 <- readRDS(

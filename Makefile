@@ -6,8 +6,8 @@ covid_data_cleaned.rds: code/01_data_processing.R
 	Rscript code/01_data_processing.R
 
 # creates table 1
-table1.rds: code/02_make_table.R covid_data_cleaned.rds
-	Rscript code/02_make_table.R
+table1.rds: code/02_make_table1.R
+	Rscript code/02_make_table1.R
 
 # creates figures
 .png: code/03_make_heatmap.R
@@ -18,5 +18,5 @@ table1.rds: code/02_make_table.R covid_data_cleaned.rds
 
 .PHONY: clean
 clean:
-	rm -f figure/*.rds
+	rm -f figure/*.rds && rm -f table/table1.rds
 	
