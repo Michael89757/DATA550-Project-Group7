@@ -56,13 +56,13 @@ table1
 
 ##### Heatmap
 
-description
+The heatmap illustrates the correlations between various comorbidities and death across the entire dataset. Patients with pneumonia exhibit the strongest positive correlation with death at 0.45. Diabetes (0.23), hypertension (0.22), chronic renal disease (0.13), and chronic obstructive pulmonary disease (0.10) also show moderate positive correlations with death.
 
 ```{r, load-plots}
 #| fig.align = "center",
 #| out.width = "600px"
 knitr::include_graphics(
-  here::here("figure", "Overall Comorbidities & Death.rds") #! TO DO: add appropriate file path to read scatter plot
+  here::here("figure", "Overall Comorbidities & Death.rds") 
 )
 
 ```
