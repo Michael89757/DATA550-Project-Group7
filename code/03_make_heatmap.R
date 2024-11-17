@@ -2,13 +2,10 @@ here::i_am(
   "code/03_make_heatmap.R"
 )
 
-data <- read.csv(
-  file = here::here("data/covid_sub.csv")
+df <- readRDS(
+  file = here::here("data/covid_data_cleaned.rds")
 )
 
-data$COVID19_CARRIER_STATUS <- ifelse(data$CLASIFFICATION_FINAL >= 1 & data$CLASIFFICATION_FINAL <= 3, 
-                                      "Confirmed", "Unconfirmed")
-data$DEATH <- ifelse(is.na(data$DATE_DIED), "No", "Yes")
 
 # Coder 2 TO DO Here
 library(ggcorrplot)
@@ -17,7 +14,7 @@ library(corrplot)
 
 #### Correlation between Comorbidities and Outcome(overall)
 
-Comorbidities <- data |>
+Comorbidities <- df |>
   select(, c("PNEUMONIA", "PREGNANT", "DIABETES", "COPD", "ASTHMA", 
              "INMSUPR", "HIPERTENSION", "CARDIOVASCULAR", "RENAL_CHRONIC", 
              "OTHER_DISEASE", "OBESITY", "TOBACCO", "DEATH"))
