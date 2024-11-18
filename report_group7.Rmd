@@ -69,13 +69,14 @@ knitr::include_graphics(
 
 ##### Plots
 
-description
+The boxplots visualize the relationship between Pneumonia, Diabetes, Hypertension, Renal Chronic Disease, and COPD (which were identified as the comobidities with the strongest positive correlation to death) and the outcome variable, Death. Each comorbidity is treated as a categorical variable with two levels (e.g., "Yes" and "No"), and the boxplots show the distribution of death status (0 = Alive, 1 = Death) for each comorbidity. 
 
-```{r, load-plots}
-#| fig.align = "center",
-#| out.width = "600px"
-#knitr::include_graphics(
-#  here::here("figure/name.png"))
+```{r, load-boxplots}
+#|fig.align = "center"
+#|out.width = "600px"
+knitr::include_graphics(
+  here::here("figure", "Comorbidities with the Strongest Positive Correlation to Death.rds")
+)
 ```
 
 # Regression Analysis
