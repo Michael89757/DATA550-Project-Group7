@@ -10,10 +10,10 @@ table1.rds: code/02_make_table1.R
 	Rscript code/02_make_table1.R
 
 # creates figures
-.png: code/03_make_heatmap.R
+heatmap: code/03_make_heatmap.R
 	Rscript code/03_make_heatmap.R
 	
-Comorbidities with the Strongest Positive Correlation to Death.rds:code/04_make_figures.R
+plot:code/04_make_figures.R
 	Rscript code/04_make_figures.R
   
 # creates survival analysis results
