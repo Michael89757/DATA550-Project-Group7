@@ -81,4 +81,12 @@ knitr::include_graphics(
 
 # Survivial Analysis
 
+We tried to fit a logistic regression model on covariates that have statistically significant impact on survival. After assessing the full model, DIABETES, CARDIOVASCULAR, OBESITY, MEDICAL_UNIT is removed from our model and our finalized model is derived as follows:
+```{r, table1}
+regression_output <- readRDS(
+  file = here::here("output/optimized_model.rds")
+)
+regression_output
+```
+
 
