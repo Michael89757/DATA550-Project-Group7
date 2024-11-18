@@ -71,13 +71,13 @@
 
 ### Coder 2 Hayley Huang
 - modify `03_make_heatmap.R` in `code/` folder:
-    - plot the heatmap and save the figure in `.png` format in `figure/` folder
+    - plot the heatmap and save in `figure/` folder
 
 - update and add all related content into `report_group7.Rmd`.
 
 ### Coder 3 Danielle McMillion
 - modify `04_make_figures.R` in `code/` folder:
-    - plot figures of interest and save them in `.png` format in `figure/` folder
+    - draw plot of interest and save them in `figure/` folder
 
 - update and add all related content into `report_group7.Rmd`.
 
