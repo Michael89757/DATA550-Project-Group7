@@ -17,11 +17,11 @@ opts_chunk$set(
 
 # Midterm Project Introduction
 
-**Description**
+- This report analyzes data on 209,715 COVID-19 patients from the Mexican government, focusing on mortality predictors. Among the population, 93% survived, and 7% succumbed, emphasizing COVID-19's severe impact.
 
-**Predictors**
-  
-**Objective:**
+- Key analyses include Table 1, which compares patient characteristics between survivors and non-survivors, and a heatmap highlighting correlations between comorbidities and outcomes, with conditions like pneumonia, COPD, diabetes, hypertension, and chronic renal disease strongly linked to mortality. A boxplot further visualizes these associations.
+
+- Logistic regression models were developed to identify mortality predictors. The optimized model, incorporating variables such as age, comorbidities, and interventions, provides a robust framework for understanding risk factors among COVID-19 patients.
 
 ```{r, here-i-am, include = FALSE}
 here::i_am(
@@ -34,7 +34,6 @@ here::i_am(
 data <- readRDS(
   file = here::here("data/covid_data_cleaned.rds")
 )
-
 ```
 
 # Descriptive Analysis
@@ -83,7 +82,7 @@ knitr::include_graphics(
 
 We tried to fit a logistic regression model on covariates that have statistically significant impact on survival. After assessing the full model, DIABETES, CARDIOVASCULAR, OBESITY, MEDICAL_UNIT is removed from our model and our finalized model is derived as follows:
 
-```{r, table1}
+```{r, regression}
 regression_output <- readRDS(
   file = here::here("output/optimized_model.rds")
 )
