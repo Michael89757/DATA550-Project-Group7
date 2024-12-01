@@ -7,6 +7,15 @@
 
 ------------------------------------------------------------------------
 
+## Instructions to Synchronize Package Repository and Generate Final Report
+
+- Clone this repository to your local machine in the terminal in RStudio.
+- Make sure package `renv` is installed and the project environment is activated.
+- Run the command `make install` in the terminal to synchronize the package repository.
+- Run the command `make report_group7.html` in the terminal to generate final report (Or directly using `make`).
+
+------------------------------------------------------------------------
+
 ## Code Description for The Project
 
 `code/01_data_processing.R`
@@ -55,6 +64,7 @@
 - `make model` will generate regression analysis results needed to compile the report in `output/` folder
 - `make report_group7.html` generates the final report
 - `make clean` will remove all generated files
+- `make install` to synchronize packages (project environment).
 
 ------------------------------------------------------------------------
 

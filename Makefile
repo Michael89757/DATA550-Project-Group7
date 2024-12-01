@@ -23,3 +23,8 @@ model: code/05_models.R
 .PHONY: clean
 clean:
 	rm -f figure/*.rds && rm -f table/table1.rds && rm -f data/covid_data_cleaned.rds && rm -f output/*.rds && rm -f report_group7.html
+
+.PHONY: install
+install:
+	Rscript -e "renv::restore(prompt = FALSE)"
+	
